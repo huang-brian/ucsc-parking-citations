@@ -1,0 +1,116 @@
+﻿OBJECTID,CODE,NAME,NUMBER,Location,Permit_Type,Disability,Meters,Comments,Paystations,Paystation_Limit,Meter_Limit,Permit_Days,Permit_Period,Shape__Area,Shape__Length,Lot #,GlobalID
+1,PKG,Granary,118,Stone House,"A, B, MC, N, RMC, Disability",Yes,No,No permit required after 5:00pm.,No,,,M - F,7:00am - 5:00pm,12432.4130859375,547.09080389719,118,3a9a98a9-e009-4a6b-8ab8-eb7e6cffba63
+2,PKG,Barn Theater,122,Barn Theater,"A, B, C, N, Admissions Visitors",No,No,No permit required after 5:00pm.,No,,,M - F,7:00am - 5:00pm,25014.6044921875,1017.68564330351,122,aeb0d835-6cda-4dbe-8e48-d2ff55fa2d2d
+3,PKG,Campus Facilities,116,Campus Facilities,"A, B, MC, N",No,Yes,No permit required after 5:00pm.,No,,2 hr.,M - F,7:00am - 5:00pm,18329.6240234375,1261.02769349748,116,471fcadb-6ded-4d28-95b7-953217907753
+4,PKG,Agroecology,168,Agroecology,"A, B, N, Disability",Yes,Yes,,No,,2 hr.,M - F,7:00am - 8:30pm,6930.310546875,424.443986170615,168,8c4ac640-20b0-45d5-bf7a-291401219357
+5,PKG,East Field House,103,East Field House,"A, B, MC, N, NC, Disability",Yes,No,Evening and Weekend Paystation: Flatrate.,Yes,2 hr.,,All,7:00am - 8:30pm,26119.47265625,1087.84105858878,103A,43919a58-98f9-4989-b0ca-78b189567097
+6,PKG,Oakes College,161,Oakes College,"A, B, MC, N",No,No,,No,,,M - F,7:00am - 8:30pm,4003.884765625,301.396330231475,161,0d3c9346-d5f0-4c5e-b496-b38443cf5871
+7,PKG,Oakes College,160,Oakes College,"A, B, MC, N, Medical",No,Yes,,No,,2 hr.,M - F,7:00am - 8:30pm,7453.2158203125,457.877908086879,160,e00f1530-6942-46a7-9cad-e965a3d10ef8
+8,PKG,Oakes College,162,Oakes/College Eight,"A, B, C162, MC, N, NC, Disability",Yes,No,Evening and Weekend Paystation: Flatrate.,Yes,2 hr.,,M - F,7:00am - 8:30pm,44997.1416015625,2314.53241839732,162,dcbde633-28b4-4fea-a0d5-4fd88629b60e
+9,PKG,Family Student Housing,134,Family Student Housing,Limited A,No,No,Permits required 24/7.,No,,,All,All,14012.833984375,775.936922537404,134,38651f96-69a4-4427-9ab5-468ec8c9063e
+10,PKG,Family Student Housing,132,Family Student Housing,,No,Yes,Permits required 24/7.,No,,2 hr.,All,All,5523.3720703125,319.634485925786,132,25ac7b0c-ae3b-4e13-92e7-feedb187a7d6
+11,PKG,Family Student Housing,130,Family Student Housing,,No,No,Permits required 24/7.,No,,,All,All,5755.275390625,368.161292608372,130,d33a2462-d2f4-443e-84f1-976a94edbdad
+12,PKG,Family Student Housing,129,Family Student Housing,Limited A,No,No,Permits required 24/7.,No,,,All,All,5771.1318359375,357.681148924225,129,e4167fe9-7371-476e-afa7-098d6e916430
+13,PKG,Family Student Housing,131,Family Student Housing,,No ,No,Permits required 24/7.,No,,,All,All,6201.923828125,338.68274611918,131,dde6070a-1216-4c6f-acea-6bfeb9ea7c42
+14,PKG,Family Student Housing,133,Family Student Housing,Limited A,No,No,Permits required 24/7.,No,,,All,All,11229.150390625,689.782667311485,133,ea55d778-894e-4fec-aa18-f26f6c04ec9f
+15,PKG,Family Student Housing,135,Family Student Housing,Limited A,No,Yes,Permits required 24/7.,No,,2 hr.,All,All,8088.5693359375,415.881700164316,135,efb2a1c6-eed2-4c90-a613-52e3aebfcccb
+16,PKG,Rachel Carson College,146,College Eight,"A, B, MC, N, NC, Disability, Medical",Yes,Yes,R & C Permits allowed after 5pm.,No,,2 hr.,M - F,7:00am - 8:30pm,9710.6708984375,748.745222684887,146,dc72f1f0-d48d-4716-9de3-3bb7f1403ebe
+17,PKG,Family Student Housing,136,Family Student Housing,Limited A,No,No,Permits required 24/7.,No,,,All,All,9483.9853515625,409.523338286767,136,a6c5d897-8d6b-4058-a067-a2acb2ca9073
+18,PKG,Arts,126,Performing Arts,"A, B, MC, N, Disability, Medical",Yes,No,Evening and Weekend Paystation: Flatrate.,Yes,2 hr.,,All,7:00am - 8:30pm,59477.8544921875,1151.97660738675,126,3ed107b2-7e8c-4d78-b7c7-aa999fd4d4f0
+19,PKG,Hahn Student Services,101,Hahn Student Services,"A, B, MC, N, NC, Disability, Medical",Yes,No,R & C Permits allowed after 5:00pm. Evening and Weekend Paystation: Flatrate.,Yes,1 hr.,,M - F,7:00am - 8:30pm,54107.51953125,2623.13244635795,101,61fda5ed-a2b4-4de1-bf81-ca261a91a5ed
+22,PKG,The Village,169,The Village,"MC, Disability, Medical",Yes,Yes,,No,,2 hr.,All,All,1404.173828125,193.593410254417,169,76f2e56f-f3ea-437a-a24a-dc820d35f25d
+23,PKG,Carriage House,115,Carriage House,"A, B, MC, N, Disability, Medical",Yes,No,No permit required after 5:00pm. ,No,,,M - F,7:00am - 5:00pm,13472.1015625,485.381789364002,115,e140e4c2-2230-482e-8f03-79a49b87cbbe
+24,PKG,Cook House,117,Cook House,"A, Disability",Yes,No,No permit required after 5:00pm.,No,,,M - F,7:00am - 5:00pm,5101.919921875,445.859028717721,117B,fe4bb663-e160-4d1b-9aea-c78e7e68e3b1
+25,PKG,Foundry,140,Performing Arts (upper),"Disability, Reserved",Yes,No,,No,,,All,All,2385.2421875,410.264309738576,140,415856db-f8ee-44ce-b1cd-049d20d9ac01
+26,PKG,Kerr Hall,141,Kerr Hall,"Reserved, Disability, Medical",Yes,No,,No,,,All,All,15219.76171875,535.091177404502,141,2d0f0ef5-99c8-424b-86de-bccd4d046ab4
+27,PKG,Lower McHenry Library,120,McHenry College,"Reserved, Disability, Medical",Yes,Yes,,No,,2 hr.,M - F,7:00am - 8:30pm,7482.1796875,443.337899169045,120A,999145d1-c13d-4e25-aaff-6c4a1896a730
+28,PKG,Porter College,124,Porter College,"A, B, C124, MC, N, Disability, Medical",Yes,No,Evening and Weekend Paystation: Flatrate.,Yes,Flat,,All,7:00am - 8:30pm,15903.658203125,1071.13085868823,124,f84b416d-12ef-46e9-9f7e-a168d656ac7a
+29,PKG,Porter College,125,Porter College,"A, B, MC, N, NC, Disability, Medical",Yes,Yes,Evening and Weekend Paystation: Flatrate.,Yes,Flat,2 hr.,All,7:00am - 8:30pm,16687.060546875,1166.28928509814,125,c2847974-fe03-430c-b756-84b38e0d6219
+30,PKG,Admissions,117,Cook House,"Admissions Visitors Only, Disability",Yes,No,No permit required after 5:00pm.,No,,,M - F,7:00am - 5:00pm,8497.0791015625,549.005230908978,117A,5416c246-337a-4bca-a4bf-211a316bc14b
+31,PKG,Oakes College,144,Oakes College,"Disability, Medical",Yes,No,,No,,,All,All,1112.30859375,151.262921486013,144,85c6e850-168a-4587-bc1f-e5d1921fcb50
+33,PKG,Kresge College,147,Kresge College,"A, B, N",No,Yes,,No,,2 hr.,All,7:00am - 8:30pm,12595.1328125,948.036187834633,147,d6658598-05de-49ba-9135-d17f1bfdf04b
+34,PKG,Redwood Grove Apartments,159,Kresge East Apartments,"C158-159, MC, Disability, Medical",Yes,No,Permits required 24/7.,No,,,All,All,3942.3984375,398.141686810352,159,2bb044e3-28e6-48e3-bc08-b2df1c5adafa
+36,PKG,Redwood Grove Apartments,158,Kresge East Apartments,"C158-159, MC, Disability, Medical",Yes,No,Permits required 24/7.,No,,,All,All,4520.4267578125,342.910290051616,158,292295bf-2ef1-4dee-a5eb-1bc6a3ca70bd
+38,PKG,Graduate Student Housing,157,Graduate Student Apartments,"Lot 157 Permit, MC, Disability",Yes,No,Permits required 24/7.,No,,,All,All,8861.986328125,639.512308958474,157,fe6bfecb-e8d9-4789-97c2-cffc519d27c0
+39,PKG,Engineering 2,139,Baskin Engineering II,"A, B, MC, N, Disability, Medical",Yes,No,,No,,,M - F,7:00am - 8:30pm,29148.736328125,1743.28723750435,139A,a26eee6b-0efe-40ef-bdcf-03a5fde121e1
+40,PKG,Health Center,128,Health Center,"A, B, MC, N, Disability, Medical",Yes,Yes,,No,,30min,M - F,7:00am - 8:30pm,22597.5087890625,1708.30878696705,128,88d2d7e8-adaf-4db1-8f19-1c6cda4c19a5
+41,PKG,Crown/Merrill Apartments,152,Crown/Merrill Apartments,"A, B, C152-155, MC, N, NC, Disability, Medical",Yes,Yes,,No,,2 hr.,All,7:00am - 8:30pm,9742.2900390625,583.701709462912,152,5be59cc0-e637-4b3c-9ffc-5e7194deb71d
+42,PKG,Crown/Merrill Apartments,153,Crown/Merrill Apartments,"A, B, C152-155, MC, N, NC, Disability, Medical",Yes,Yes,,No,,2 hr.,All,7:00am - 8:30pm,4426.9560546875,369.583981269844,153,3df21438-ffae-463a-ad50-e9dae98beec2
+43,PKG,Crown/Merrill Apartments,154,Crown/Merrill Apartments,"A, B, C152-155, MC, N, NC, Disability, Medical",Yes,Yes,,No,,2 hr.,All,7:00am - 8:30pm,8699.5615234375,558.455869375377,154,0ba1246a-80e1-4792-8db2-2653916f5199
+44,PKG,Fire House,156,Crown/Merrill Apartments,"A, B, N, NC",No,No,,No,,,M - F,7:00am - 8:30pm,6562.6650390625,406.596835889511,156,3c4cc178-6681-4d9a-8559-be4a4f042fc7
+45,PKG,Crown College ""Pit"",111,Crown College,"A, B, C111, MC, N, NC",No,Yes,,No,,2 hr.,M - F,7:00am - 8:30pm,39293.84375,1749.70115067856,111A,d8f7e867-5580-471f-af6f-821ba068e3f5
+46,PKG,Quarry Plaza,102,Quarry Plaza,"Disability, Medical, Reserved",Yes,No,,No,,,All,All,8569.82421875,637.105782080708,102,6820e639-bfe5-469b-a304-a74aa87c501a
+47,PKG,Merrill College,119,Merrill College,"A, B, C119, MC, N, NC, Medical",No,Yes,,No,,2 hr.,M - F,7:00am - 8:30pm,38710.1201171875,2130.49467948262,119,28a1209d-5a82-4035-b64d-d491b0a8e621
+48,PKG,Cowell College,106,Cowell College,"MC, Medical , Reserved, Disability",Yes,No,,No,,,All,All,2846.7744140625,260.897565191731,106,02d503ba-5c9f-42ff-b3ac-4833aa8d3232
+49,PKG,Cowell/Stevenson,107,Cowell College,"A, B, MC, N, Disability, Medical",Yes,No,,Yes,Flat,,All,7:00am - 8:30pm,8404.9912109375,568.462457979722,107,fa864198-9eae-4259-9840-f5d2843f826a
+50,PKG,Stevenson Service Road,108,Cowell College,"A, B, MC, N, Disability, Medical",Yes,No,,No,,,All,7:00am - 8:30pm,1377.8740234375,217.15170480965,108,d6dfbc23-5fce-4961-8f65-c100b7e20bee
+51,PKG,Stevenson College110,110,Stevenson College,"A, B, MC, N, NC",No,No,,No,,,All,7:00am - 8:30pm,10647.205078125,506.521921120921,110,6dcd7de0-4a80-4ccb-a945-701da114c834
+52,PKG,Stevenson College,109,Stevenson College,"A, B, MC, N, NC",No,No,Evening and Weekend Paystation: Flatrate.,Yes,2 hr.,,All,7:00am - 8:30pm,22861.1083984375,1009.94911585652,109,eb7c755e-de4c-45c5-bcec-43f00a33da4b
+53,PKG,College Nine,167,College Nine Apartments,"A, B",No,No,,No,,,All,7:00am - 8:30pm,4320.83984375,384.951363494774,167,8d9bbd83-08e0-46ae-8500-d74c29dfb029
+54,PKG,Social Sciences,114,Social Science,"A, B, MC, N, NC",No,No,,No,,,M - F,7:00 am - 8:30pm,7263.2880859375,469.865321097655,114,8ab3fb20-20e4-42f3-8e87-8c157afe6def
+55,PKG,College Ten,165,Social Science 2/College Ten,"A, B, MC, N, NC, Disability, Medical",Yes,No,,No,,,All,7:00am - 8:30pm,12382.572265625,876.245700161637,165,e5fb1aa4-e03b-4a50-ba03-9c7d630fd841
+56,PKG,College Ten,164,Social Science 2/College Ten,"A, B, N",No,No,,No,,,All,7:00am - 8:30pm,13995.0048828125,1089.85865307765,164,eefa9f41-80c3-45e0-88b1-6a764f5c4dde
+57,PKG,College Nine,166,Social Sience 1/College Nine,"A, B, MC, N, Disability, Medical",Yes,No,Permits required 24/7.,No,,,All,All,6389.8359375,696.850352453845,166,dd4fd94b-3b35-4add-a7a1-f081cae34894
+58,PKG,Heat Plant,123,Heating Plant,"A, B, MC, N, Disability, Medical",Yes,No,,No,,,M - F,7:00am - 8:30pm,8277.146484375,864.287935794359,123,20ea478c-4a84-4467-a495-db394703f672
+59,PKG,Communications,139,Baskin Engineering II,"Disability, Medical",Yes,Yes,,No,,30min,M - F,7:00am - 8:30pm,4154.85546875,264.000741268082,139B,d3fb77a8-7a98-4427-9969-9800f3d0223b
+60,PKG,Baskin Engineering,138,Baskin Engineering,"A, B, MC, N, Medical",No,No,,No,,,M - F,7:00am - 8:30pm,10872.8798828125,813.243064455778,138,eb4f9347-6909-4b11-8da6-1873efb7a8ec
+61,PKG,East Remote Parking,104,East Meadow,"A, B, C, N, R, RMC, Disability",Yes,No,,No,,,M - F,7:00am - 5:00pm,269987.744140625,3938.00649985928,104,bf7d7490-a4f7-4eb9-a6ba-c113e49cce50
+62,PKG,West Remote Parking,127,,"A, B, C, N, R, RMC, Disability",Yes,No,,No,,,M - F,7:00am - 5:00pm,69648.576171875,2694.54667994063,127,a053b05f-2358-45bc-9743-31533e0b03c3
+64,PKG,,,,,,,,,,,,,4924.82421875,469.095929538496,None,d100e13d-6c67-400e-af06-804d1ce0714f
+65,PKG,,,,,,,,,,,,,5495.1982421875,371.420264817893,None,8e3492c5-fa57-4731-8d33-c8dd37fe8e07
+66,PKG,,,,,,,,,,,,,1741.3349609375,176.71382268461,None,6dc29500-396a-455c-ba06-0711fbd2c379
+67,PKG,,,,,,,,,,,,,1772.275390625,200.454616328891,None,cbee7080-6f0e-4aa9-9854-2d97790a8d6c
+68,PKG,,,,,,,,,,,,,1384.533203125,178.182485524738,None,80b3f513-a713-440a-928f-c260208263ec
+69,PKG,,,,,,,,,,,,,7140.9140625,643.059488744272,None,55a0d871-9634-471e-86c4-f970f52d7e2b
+70,PKG,,,,,,,,,,,,,3558.28125,363.623815067054,None,4b7cacdc-43fe-4c73-bfc2-6b32772f796b
+71,PKG,,,,,,,,,,,,,3258.4482421875,375.426186412923,None,bafc1b71-34ea-4710-8957-bdd670cf2c2a
+72,PKG,,,,,,,,,,,,,5489.947265625,521.195086970374,None,9d0e8f23-ef39-4561-98e9-d6d2b5eb26f3
+73,PKG,,,,,,,,,,,,,2270.33203125,233.00486286017,None,81acaada-c3e6-4d9c-ace0-c39414b21e06
+74,PKG,,,,,,,,,,,,,5744.2265625,477.044665729047,None,2c07ccad-5f0f-4f7a-944a-12ccea42028f
+75,PKG,,,,,,,,,,,,,1471.6611328125,212.443875814916,None,2b024a26-2d44-43a2-8c79-62a92f06dadf
+76,PKG,,,,,,,,,,,,,1601.0390625,173.312774459483,None,44d76075-8109-4a19-8fe7-403eeb5b7c12
+77,PKG,,,,,,,,,,,,,2778.6298828125,239.349696639745,None,8f872ee5-2f36-41ad-a54c-6451d0e95c8d
+78,PKG,,,,,,,,,,,,,3580.94921875,334.284796702252,None,c1413d69-15fc-4d06-905c-64cfc3ac085f
+79,PKG,,,,,,,,,,,,,615.6923828125,103.801267551611,None,123b8505-7faa-40aa-bb2e-6dd00323f700
+80,PKG,,,,,,,,,,,,,2265.822265625,207.615215360154,None,be92f97c-e251-4f52-a1ef-77abb4fef70d
+81,PKG,,,,,,,,,,,,,2079.9619140625,228.411275941757,None,598ab34a-328d-47cb-ab7b-8e6f7cf49251
+82,PKG,,,,,,,,,,,,,2968.9892578125,299.655184946509,None,12907195-80a6-4e73-9079-43eb28e80d09
+83,PKG,,,,,,,,,,,,,3031.5185546875,234.601653637669,None,b6655ecd-90b9-4290-868e-f5220dfbb5c1
+84,PKG,,,,,,,,,,,,,1950.0380859375,214.551187713586,None,85a2c958-ec5a-4e29-9b2c-bad672bb1aa8
+85,PKG,,,,,,,,,,,,,3221.73046875,240.889787340249,None,17c33421-77f5-456e-904b-26e93c4e9a88
+86,PKG,,,,,,,,,,,,,3201.5283203125,244.432394043885,None,72f3ad41-5caa-4d56-a7aa-b3ba01f5a856
+87,PKG,,,,,,,,,,,,,2329.4462890625,205.461275805857,None,c1540de3-246c-4940-a54d-2e71f543fee4
+88,PKG,,,,,,,,,,,,,2704.1328125,217.762052906244,None,c00bf3fd-a89a-47c4-a4f4-d94f101e82f8
+89,PKG,,,,,,,,,,,,,2064.9208984375,224.83484607759,None,3254842c-5001-435e-a3f6-d0424feeb2ad
+90,PKG,,,,,,,,,,,,,1289.3193359375,176.869678516258,None,55ff8401-2a6a-4473-8cac-45e57d27eee3
+92,PKG,,,,,,,,,,,,,6240.9326171875,509.485786112237,None,10341c22-3036-4973-8ef8-0a908ddcdff7
+95,PKG,North Perimeter,149,,"A, B, C150B",No,No,,No,,,M - F,7:00am - 8:30pm,20109.7685546875,946.434426791189,150B,14b02290-0e4a-4fa1-89ef-4935ea73b757
+96,PKG,OPERS,103,,Reserved,No,No,,No,,,All,All,3603.3466796875,247.355337039339,103B,fdc45872-9948-4077-a8f2-512b99707225
+97,PKG,University Police,105,,"A, N, Disability",Yes,No,,No,,,M - F,7:00am - 5:00pm,897.845703125,155.609328059791,105,65e748d2-3f3d-4833-80cb-3b1ac5bc5164
+98,PKG,Crown College Circle,111,Crown College,"A, B, MC, N, Medical, Disability",Yes,Yes,,No,,2 hr.,M - F,7:00am - 8:30pm,13323.7880859375,1037.56258921551,111B,f299c0f5-1c27-42ab-b910-8b2ce5a92ca4
+100,PKG,Core West Structure,112,,"A, B, EV, MC, N, NC, Disability, Medical",Yes,No,,Yes,Flat,,M - F,7:00am - 8:30pm,31229.8408203125,850.292919026955,112,de9f27d3-430a-4990-97bf-d2df8319acb0
+101,PKG,Thimann Lab,113,,"MC, Disability, Medical",Yes,No,,No,,,All,All,729.724609375,120.1210197889,113,45c80b4f-7061-4f61-ae52-cd16423679d6
+102,PKG,Upper McHenry Library,120,,"Reserved, Disability, Medical",Yes,No,,No,,,All,All,9922.6005859375,507.133227071731,120B,664225cb-6d46-45b3-8460-7d665413f064
+103,PKG,Biomed/Science Library,121,,"Disability, Medical",Yes,No,,No,,,All,All,594.0126953125,104.273563412774,121,3c50732f-dcc1-4971-91e8-862a50c0fa8a
+104,PKG,Central Garage,137,,"Reserved, Disability, Medical",Yes,No,,No,,,All,All,1186.9658203125,173.822755515534,137,0c647c6f-0b2a-48e0-8533-ceb70ac9aa46
+105,PKG,Kresge College,143,Kresge College,"A, B, MC, N, NC, Disability, Medical",Yes,Yes,,No,,2 hr.,All,7:00am - 8:30pm,14886.0380859375,904.986476770116,143,7159dde7-afc2-487e-9b46-de2523447113
+106,PKG,Kresge College,145,Kresge College,"A, B, C145, N, Disability",Yes,No,,No,,,All,7:00am - 8:30pm,5010.6357421875,374.919023482826,145,0231725e-c98f-4a81-90c7-bd8dc3c06e2a
+107,PKG,Heller Extension,149,,"A, B, N",No,No,,No,,,M - F,7:00am - 8:30pm,8637.1103515625,1583.78105931514,149,e8a3facb-eda7-440b-a6d7-c61a87546095
+109,PKG,North Perimeter,150,,"A, B, MC, N, Medical",No,No,,No,,,M - F,7:00am - 8:30pm,15415.9619140625,877.814608943246,150A,69776c5c-7a80-4e78-8761-57389f5186ad
+110,PKG,Cardiff House,151,,"A, B, MC, N, Disability",Yes,No,,No,,,M - F,7:00am - 5:00pm,4386.8623046875,336.158265871195,151,f8fec84b-21e1-4861-8589-c39257397aa8
+111,PKG,Crown-Merrill Apartments,155,,"A, B, C152-155, MC, N, NC, Disability, Medical",Yes,No,,No,,,All,7:00am - 8:30pm,2514.201171875,668.010226700296,155,fd5b1472-2435-46dd-bb7f-eb765b083f64
+112,PKG,Cowell Provost,163,,"Disability, Reserved",Yes,Yes,,No,,30min,All,All,1153.30859375,205.621185353216,163,24ba739d-9f0c-4316-b61f-5dcc132d0386
+113,PKG,Hay Barn,170,,"A, Disability",Yes,Yes,,No,,2 hr.,M - F,7:00am - 5:00pm,9082.4462890625,528.423763866654,170,fc2bad62-b5fe-49cd-aeb0-511007a80e16
+115,,,,,,,,,,,,,,,,,f9b2b2ac-d2e5-45e0-8170-f89b6e6c8326
+116,,,,,,,,,,,,,,,,,6900414d-15ff-4000-afcb-38d2160eb5b7
+118,,Kresge College,142,Kresge College,"A, B, N, NC, Reserved, Disability",Yes,Yes,R & C Permits allowed after 5pm.,No,,2 hr.,M - F,7:00am - 8:30pm,1189.03515625,140.060248368284,142,a9359b6b-5236-45f4-ab50-524147213d68
+119,PKG,Seymour Center,201,,"A, B, Disability",,,,,,,,,49927.6787109375,928.016264646406,201,9e2cf512-c2ea-4f12-a04b-0f2045dc850a
+120,PKG,Seymour Center 2,202,Coastal Science Campus South,,,,,,,,,,1520.7275390625,204.266629429228,202,78d60fae-6f3a-42a0-ac6c-ab63f503e1ba
+121,PKG,Ocean Health Building,203,Coastal Science Campus South,,,,,,,,,,10020.3701171875,796.039435963291,203,51d88d19-16c7-400e-9c54-68a630c01559
+122,PKG,Conservation Annex,204,204,,,,,,,,,,9538.7255859375,518.813287687881,204,3a04805d-a0b3-436d-8644-b65243d5f484
+123,,CBB South,205,,,,,,,,,,,27270.3125,1491.14025637681,205,76ccc004-589b-446d-b77d-d3c21f4cd2b7
+126,PKG,CBB North,206,,,,,,,,,,,30688.6318359375,889.200452189353,206,d8919843-7d8f-498a-8a4e-d39df852d73b
+127,PKG,CSC Entry,207,,,,,,,,,,,4354.0205078125,277.125455923481,207,aac80043-bc26-42a6-b6ed-d0faee564aa0
+128,PKG,Westside Research Park,301,,,,,,,,,,,65339.087890625,2726.68163522362,301,6951de86-cf00-41f5-b990-1aba28c6d714
+147,,WRP Special Events,302,,,,,,,,,,,76847.2822265625,2522.21363354456,302,68c22238-bff7-4bc3-9b90-65d78a687a65
+164,PKG,ARC Center and Baskin Arts,173,ARC Center and Baskin Arts,"ADA, Medical, Parkmobile",,,,,,,Daily,7:00am-8:30pm,31912.294921875,2574.02453178791,173,1b5c513d-2a0c-47d5-a920-dba5437e8e2c

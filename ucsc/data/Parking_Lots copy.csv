@@ -1,0 +1,35 @@
+﻿OBJECTID,CODE,NAME,NUMBER,Location,Lot #,GlobalID
+1,PKG,Granary,118,Stone House,118,3a9a98a9-e009-4a6b-8ab8-eb7e6cffba63
+2,PKG,Barn Theater,122,Barn Theater,122,aeb0d835-6cda-4dbe-8e48-d2ff55fa2d2d
+3,PKG,Campus Facilities,116,Campus Facilities,116,471fcadb-6ded-4d28-95b7-953217907753
+4,PKG,Agroecology,168,Agroecology,168,8c4ac640-20b0-45d5-bf7a-291401219357
+5,PKG,East Field House,103,East Field House,103A,43919a58-98f9-4989-b0ca-78b189567097
+6,PKG,Oakes College,161,Oakes College,161,0d3c9346-d5f0-4c5e-b496-b38443cf5871
+7,PKG,Oakes College,160,Oakes College,160,e00f1530-6942-46a7-9cad-e965a3d10ef8
+8,PKG,Oakes College,162,Oakes/College Eight,162,dcbde633-28b4-4fea-a0d5-4fd88629b60e
+9,PKG,Family Student Housing,134,Family Student Housing,134,38651f96-69a4-4427-9ab5-468ec8c9063e
+10,PKG,Family Student Housing,132,Family Student Housing,132,25ac7b0c-ae3b-4e13-92e7-feedb187a7d6
+11,PKG,Family Student Housing,130,Family Student Housing,130,d33a2462-d2f4-443e-84f1-976a94edbdad
+12,PKG,Family Student Housing,129,Family Student Housing,129,e4167fe9-7371-476e-afa7-098d6e916430
+13,PKG,Family Student Housing,131,Family Student Housing,131,dde6070a-1216-4c6f-acea-6bfeb9ea7c42
+14,PKG,Family Student Housing,133,Family Student Housing,133,ea55d778-894e-4fec-aa18-f26f6c04ec9f
+15,PKG,Family Student Housing,135,Family Student Housing,135,efb2a1c6-eed2-4c90-a613-52e3aebfcccb
+16,PKG,Rachel Carson College,146,College Eight,146,dc72f1f0-d48d-4716-9de3-3bb7f1403ebe
+17,PKG,Family Student Housing,136,Family Student Housing,136,a6c5d897-8d6b-4058-a067-a2acb2ca9073
+18,PKG,Arts,126,Performing Arts,126,3ed107b2-7e8c-4d78-b7c7-aa999fd4d4f0
+19,PKG,Hahn Student Services,101,Hahn Student Services,101,61fda5ed-a2b4-4de1-bf81-ca261a91a5ed
+22,PKG,The Village,169,The Village,169,76f2e56f-f3ea-437a-a24a-dc820d35f25d
+23,PKG,Carriage House,115,Carriage House,115,e140e4c2-2230-482e-8f03-79a49b87cbbe
+24,PKG,Cook House,117,Cook House,117B,fe4bb663-e160-4d1b-9aea-c78e7e68e3b1
+25,PKG,Foundry,140,Performing Arts (upper),140,415856db-f8ee-44ce-b1cd-049d20d9ac01
+26,PKG,Kerr Hall,141,Kerr Hall,141,2d0f0ef5-99c8-424b-86de-bccd4d046ab4
+27,PKG,Lower McHenry Library,120,McHenry College,120A,999145d1-c13d-4e25-aaff-6c4a1896a730
+28,PKG,Porter College,124,Porter College,124,f84b416d-12ef-46e9-9f7e-a168d656ac7a
+29,PKG,Porter College,125,Porter College,125,c2847974-fe03-430c-b756-84b38e0d6219
+30,PKG,Admissions,117,Cook House,117A,5416c246-337a-4bca-a4bf-211a316bc14b
+31,PKG,Oakes College,144,Oakes College,144,85c6e850-168a-4587-bc1f-e5d1921fcb50
+33,PKG,Kresge College,147,Kresge College,147,d6658598-05de-49ba-9135-d17f1bfdf04b
+34,PKG,Redwood Grove Apartments,159,Kresge East Apartments,159,2bb044e3-28e6-48e3-bc08-b2df1c5adafa
+36,PKG,Redwood Grove Apartments,158,Kresge East Apartments,158,292295bf-2ef1-4dee-a5eb-1bc6a3ca70bd
+38,PKG,Graduate Student Housing,157,Graduate Student Apartments,157,fe6bfecb-e8d9-4789-97c2-cffc519d27c0
+39,PKG,Engineering 2,139,Baskin Engineering II,139A,a26eee6b-0efe-40ef-bdcf-03a5fde121e1

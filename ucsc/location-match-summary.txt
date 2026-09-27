@@ -1,0 +1,255 @@
+Loading parking lots from: ./data/Parking_Lots.csv
+Using columns: LOT_NUMBER='Lot #', NAME='NAME'
+               OBJECTID='OBJECTID'
+
+Loaded 85 parking lots
+
+Reading ticket locations from: tickets_cleaned.csv
+Found 179 unique locations
+
+Location                                           Lot #    Lot Name                       Confidence  
+----------------------------------------------------------------------------------------------------
+101 HAHN STUDENT SERVICES                          101      Hahn Student Services          100.00%      ✓ MATCHED
+102 QUARRY PLAZA                                   102      Quarry Plaza                   100.00%      ✓ MATCHED
+102 QUARRY PLAZA LOADING DOCK                      102      Quarry Plaza                   100.00%      ✓ MATCHED
+103A EAST FIELD HOUSE                              103A     East Field House               86.49%       ✓ MATCHED
+103B ATH-REC                                       N/A      N/A                            0.00         ✗ manual MATCH
+104 EAST REMOTE                                    104      East Remote Parking            100.00%      ✓ MATCHED
+105 UNIVERSITY POLICE                              105      University Police              100.00%      ✓ MATCHED
+106 COWELL COLLEGE                                 106      Cowell College                 100.00%      ✓ MATCHED
+107 COWELL/STEVENSON                               107      Cowell/Stevenson               100.00%      ✓ MATCHED
+108 STEVENSON SERVICE ROAD                         108      Stevenson Service Road         100.00%      ✓ MATCHED
+109 STEVENSON COLLEGE                              109      Stevenson College              100.00%      ✓ MATCHED
+110 STEVENSON COLLEGE                              110      Stevenson College110           100.00%      ✓ MATCHED
+111A CROWN COLLEGE PIT                             111A     Crown College ""Pit""          79.07%       ✓ MATCHED
+111B CROWN COLLEGE CIRCLE                          111B     Crown College Circle           88.89%       ✓ MATCHED
+112 CORE WEST STRUCTURE                            112      Core West Structure            100.00%      ✓ MATCHED
+113 THIMANN LAB                                    113      Thimann Lab                    100.00%      ✓ MATCHED
+114 JOHN R. LEWIS                                  114      Social Sciences                100.00%      ✓ MATCHED
+115 CARRIAGE HOUSE                                 115      Carriage House                 100.00%      ✓ MATCHED
+116 CAMPUS FACILITIES                              116      Campus Facilities              100.00%      ✓ MATCHED
+117A ADMISSIONS                                    117A     Admissions                     80.00%       ✓ MATCHED
+117B COOK HOUSE                                    117B     Cook House                     80.00%       ✓ MATCHED
+118 GRANARY                                        118      Granary                        100.00%      ✓ MATCHED
+119 MERRILL COLLEGE                                119      Merrill College                100.00%      ✓ MATCHED
+120A LOWER MCHENRY LIBRARY                         120A     Lower McHenry Library          89.36%       ✓ MATCHED
+120B LOWER MCHENRY LIBRARY                         120A     Lower McHenry Library          89.36%       ✓ MATCHED
+120B UPPER MCHENRY LIBRARY                         120B     Upper McHenry Library          89.36%       ✓ MATCHED
+121 BIOMED/SCIENCE LIBRARY                         121      Biomed/Science Library         100.00%      ✓ MATCHED
+122 BARN THEATER                                   122      Barn Theater                   100.00%      ✓ MATCHED
+123 HEAT PLANT                                     123      Heat Plant                     100.00%      ✓ MATCHED
+124 PORTER COLLEGE                                 124      Porter College                 100.00%      ✓ MATCHED
+125 PORTER COLLEGE                                 125      Porter College                 100.00%      ✓ MATCHED
+126 ARTS                                           126      Arts                           100.00%      ✓ MATCHED
+127 WEST REMOTE                                    127      West Remote Parking            100.00%      ✓ MATCHED
+128 HEALTH CENTER                                  128      Health Center                  100.00%      ✓ MATCHED
+129 FAMILY STUDENT HOUSING - 100 LOOP              129      Family Student Housing         100.00%      ✓ MATCHED
+129-136 FAMILY STUDENT HOUSING                     134      Family Student Housing         84.62%       x deleted
+130 FAMILY STUDENT HOUSING - 200 LOOP              130      Family Student Housing         100.00%      ✓ MATCHED
+131 FAMILY STUDENT HOUSING - 300 LOOP              131      Family Student Housing         100.00%      ✓ MATCHED
+132 FAMILY STUDENT HOUSING - 400 LOOP              132      Family Student Housing         100.00%      ✓ MATCHED
+133 FAMILY STUDENT HOUSING - 500 LOOP              133      Family Student Housing         100.00%      ✓ MATCHED
+134 FAMILY STUDENT HOUSING - 600 LOOP              134      Family Student Housing         100.00%      ✓ MATCHED
+135 FAMILY STUDENT HOUSING - 700 LOOP              135      Family Student Housing         100.00%      ✓ MATCHED
+136 FAMILY STUDENT HOUSING - 800 LOOP              136      Family Student Housing         100.00%      ✓ MATCHED
+137 TAPS SALES OFFICE                              137      Central Garage                 100.00%      ✓ MATCHED
+138 BASKIN ENGINEERING                             138      Baskin Engineering             100.00%      ✓ MATCHED
+139A ENGINEERING II                                139A     Engineering 2                  75.00%       ✓ MATCHED
+139B COMMUNICATIONS                                139B     Communications                 84.85%       ✓ MATCHED
+140 FOUNDRY                                        140      Foundry                        100.00%      ✓ MATCHED
+141 KERR HALL                                      141      Kerr Hall                      100.00%      ✓ MATCHED
+142 KRESGE COLLEGE                                 142      Kresge College                 100.00%      ✓ MATCHED
+144 COLLEGE NINE                                   144      Oakes College                  100.00%      ✓ MATCHED
+144 OAKES COLLEGE                                  144      Oakes College                  100.00%      ✓ MATCHED
+145 KRESGE COLLEGE                                 145      Kresge College                 100.00%      ✓ MATCHED
+146 RACHEL CARSON COLLEGE                          146      Rachel Carson College          100.00%      ✓ MATCHED
+147 KRESGE COLLEGE                                 147      Kresge College                 100.00%      ✓ MATCHED
+149 HELLER EXTENSION                               149      Heller Extension               100.00%      ✓ MATCHED
+150A NORTH PERIMETER                               150B     North Perimeter                85.71%       ✓ MATCHED
+150B NORTH PERIMETER                               150B     North Perimeter                85.71%       ✓ MATCHED
+151 CARDIFF HOUSE                                  151      Cardiff House                  100.00%      ✓ MATCHED
+152 CROWN - MERRILL APARTMENTS                     152      Crown/Merrill Apartments       100.00%      ✓ MATCHED
+153 CROWN - MERRILL APARTMENTS                     153      Crown/Merrill Apartments       100.00%      ✓ MATCHED
+154 CROWN - MERRILL APARTMENTS                     154      Crown/Merrill Apartments       100.00%      ✓ MATCHED
+155 CROWN - MERRILL APARTMENTS                     155      Crown-Merrill Apartments       100.00%      ✓ MATCHED
+156 FIRE HOUSE                                     156      Fire House                     100.00%      ✓ MATCHED
+157 GRADUATE STUDENT APARTMENTS                    157      Graduate Student Housing       100.00%      ✓ MATCHED
+158-159 REDWOOD GROVE APARTMENTS                   159      Redwood Grove Apartments       85.71%       ✓ MATCHED
+160 OAKES COLLEGE                                  160      Oakes College                  100.00%      ✓ MATCHED
+161 OAKES COLLEGE                                  161      Oakes College                  100.00%      ✓ MATCHED
+162 OAKES COLLEGE                                  162      Oakes College                  100.00%      ✓ MATCHED
+163 COWELL PROVOST                                 163      Cowell Provost                 100.00%      ✓ MATCHED
+164 JOHN R. LEWIS COLLEGE                          164      College Ten                    100.00%      ✓ MATCHED
+165 JOHN R. LEWIS COLLEGE                          165      College Ten                    100.00%      ✓ MATCHED
+166 COLLEGE NINE                                   166      College Nine                   100.00%      ✓ MATCHED
+167 COLLEGE NINE                                   167      College Nine                   100.00%      ✓ MATCHED
+168 AGROECOLOGY                                    168      Agroecology                    100.00%      ✓ MATCHED
+169 THE VILLAGE                                    169      The Village                    100.00%      ✓ MATCHED
+170 HAY BARN                                       170      Hay Barn                       100.00%      ✓ MATCHED
+171 ENVIRONMENTAL HEALTH & SAFETY                  N/A      N/A                            0.00         ✗ NO MATCH
+201 COASTAL SCIENCE CAMPUS                         201      Seymour Center                 100.00%      ✓ MATCHED
+202 COASTAL SCIENCE CAMPUS                         202      Seymour Center 2               100.00%      ✓ MATCHED
+203 COASTAL SCIENCE CAMPUS                         203      Ocean Health Building          100.00%      ✓ MATCHED
+204 COASTAL SCIENCE CAMPUS                         204      Conservation Annex             100.00%      ✓ MATCHED
+205 COASTAL SCIENCE CAMPUS                         205      CBB South                      100.00%      ✓ MATCHED
+206 COASTAL SCIENCE CAMPUS                         206      CBB North                      100.00%      ✓ MATCHED
+207 COASTAL SCIENCE CAMPUS                         207      CSC Entry                      100.00%      ✓ MATCHED
+301 WESTSIDE RESEARCH PARK                         301      Westside Research Park         100.00%      ✓ MATCHED
+302 WESTSIDE RESEARCH PARK                         302      WRP Special Events             100.00%      ✓ MATCHED
+6360                                               N/A      N/A                            0.00         ✗ NO MATCH
+ACADEMIC REOSURCE CENTER (ARC)                     N/A      N/A                            0.00         ✗ NO MATCH
+ACADEMIC RESOURCE CENTER (ARC)                     N/A      N/A                            0.00         ✗ NO MATCH
+ACEDEMIC RESOURSE CENTER                           201      Seymour Center                 63.16%       ✓ MATCHED
+ALAN CHADWICK GARDEN                               N/A      N/A                            0.00         ✗ NO MATCH
+BARN G                                             N/A      N/A                            0.00         ✗ NO MATCH
+BASKIN CIRCLE                                      N/A      N/A                            0.00         ✗ NO MATCH
+BASKIN ENG COURTYARD                               N/A      N/A                            0.00         ✗ NO MATCH
+BASKIN ENGINEERING                                 138      Baskin Engineering             100.00%      ✓ MATCHED
+BASKIN VISUAL ARTS                                 N/A      N/A                            0.00         ✗ NO MATCH
+BLACKSMITH SHOP DIRT AREA                          N/A      N/A                            0.00         ✗ NO MATCH
+CHINQUAPIN RD.                                     N/A      N/A                            0.00         ✗ NO MATCH
+CLASSROOM UNIT BUILDING                            N/A      N/A                            0.00         ✗ NO MATCH
+COGEN PLANT                                        123      Heat Plant                     66.67%       ✓ MATCHED
+COLLEGE NINE                                       167      College Nine                   100.00%      ✓ MATCHED
+COLLEGE NINE RD.                                   167      College Nine                   85.71%       ✓ MATCHED
+COOLIDGE DRIVE                                     167      College Nine                   61.54%       ✓ MATCHED
+CORPS YARD                                         N/A      N/A                            0.00         ✗ NO MATCH
+COWELL APARTMENTS                                  152      Crown/Merrill Apartments       82.93%       ✓ MATCHED
+COWELL APARTMENTS 2                                152      Crown/Merrill Apartments       79.07%       ✓ MATCHED
+COWELL COLLEGE                                     106      Cowell College                 100.00%      ✓ MATCHED
+COWELL DINING LOADING DOCK                         N/A      N/A                            0.00         ✗ NO MATCH
+COWELL-STEVENSON RD.                               107      Cowell/Stevenson               83.33%       ✓ MATCHED
+COWELL-STEVENSON SERVICE RD.                       108      Stevenson Service Road         80.00%       ✓ MATCHED
+CROWN SERVICE RD.                                  108      Stevenson Service Road         66.67%       ✓ MATCHED
+CROWN-MERRILL APARTMENTS                           155      Crown-Merrill Apartments       100.00%      ✓ MATCHED
+DIRT CROWN SERVICE RD.                             108      Stevenson Service Road         63.64%       ✓ MATCHED
+EARTH AND MARINE SCIENCES                          N/A      N/A                            0.00         ✗ NO MATCH
+EAST FIELD HOUSE SPORT COMPLEX                     103A     East Field House               69.57%       ✓ MATCHED
+EAST FIELD SERVICE ROAD                            108      Stevenson Service Road         71.11%       ✓ MATCHED
+EMPIRE GRADE                                       N/A      N/A                            0.00         ✗ NO MATCH
+ENGINEERING II                                     139A     Engineering 2                  88.89%       ✓ MATCHED
+FAMILY STUDENT HOUSING                             134      Family Student Housing         100.00%      ✓ MATCHED
+FARM SERVICE ROAD                                  108      Stevenson Service Road         66.67%       ✓ MATCHED
+FIELD OFF OF HAGER                                 N/A      N/A                            0.00         ✗ NO MATCH
+GRADUATE STUDENT COMMONS                           157      Graduate Student Housing       79.17%       ✓ MATCHED
+HAGAR DR.                                          N/A      N/A                            0.00         ✗ NO MATCH
+HELLER DR.                                         N/A      N/A                            0.00         ✗ NO MATCH
+HUMANITIES                                         N/A      N/A                            0.00         ✗ NO MATCH
+JOHN R LEWIS RD                                    N/A      N/A                            0.00         ✗ NO MATCH
+JOHN R. LEWIS COLLEGE                              161      Oakes College                  64.71%       ✓ MATCHED
+KOSHLAND WAY                                       N/A      N/A                            0.00         ✗ NO MATCH
+KRESGE ACAD                                        147      Kresge College                 64.00%       ✓ MATCHED
+KRESGE APARTMENTS                                  159      Redwood Grove Apartments       73.17%       ✓ MATCHED
+KRESGE COLLEGE                                     147      Kresge College                 100.00%      ✓ MATCHED
+KRESGE RD                                          147      Kresge College                 60.87%       ✓ MATCHED
+LEONARDO LANE                                      N/A      N/A                            0.00         ✗ NO MATCH
+LOOKOUT                                            N/A      N/A                            0.00         ✗ NO MATCH
+LOT 104 PARKMOBILE                                 N/A      N/A                            0.00         ✗ NO MATCH
+LOT 109 PARKMOBILE                                 N/A      N/A                            0.00         ✗ NO MATCH
+LOT 126 PARKMOBILE                                 N/A      N/A                            0.00         ✗ NO MATCH
+MCHENRY LIBRARY                                    120A     Lower McHenry Library          83.33%       ✓ MATCHED
+MCLAUGHLIN DR.                                     N/A      N/A                            0.00         ✗ NO MATCH
+MERRILL CIRCLE                                     119      Merrill College                75.86%       ✓ MATCHED
+MUSIC HALL                                         N/A      N/A                            0.00         ✗ NO MATCH
+OAKES APARTMENTS                                   159      Redwood Grove Apartments       65.00%       ✓ MATCHED
+OAKES CIRCLE                                       161      Oakes College                  72.00%       ✓ MATCHED
+OAKES COLLEGE                                      161      Oakes College                  100.00%      ✓ MATCHED
+OAKES FIELD SERVICE RD.                            N/A      N/A                            0.00         ✗ NO MATCH
+OAKES ROAD                                         161      Oakes College                  60.87%       ✓ MATCHED
+OCEAN HEALTH                                       203      Ocean Health Building          72.73%       ✓ MATCHED
+OWLS NEST                                          N/A      N/A                            0.00         ✗ NO MATCH
+PERFORMING ARTS                                    N/A      N/A                            0.00         ✗ NO MATCH
+PHYSICAL SCIENCES BUILDING                         114      Social Sciences                63.41%       ✓ MATCHED
+PHYSICAL SCIENCES BUILDING DOCK                    N/A      N/A                            0.00         ✗ NO MATCH
+PORTER APARTMENTS                                  159      Redwood Grove Apartments       68.29%       ✓ MATCHED
+PORTER DINNING HALL                                N/A      N/A                            0.00         ✗ NO MATCH
+PORTER DORMS                                       124      Porter College                 61.54%       ✓ MATCHED
+PORTER PROVOST RESIDENCE                           N/A      N/A                            0.00         ✗ NO MATCH
+PORTER SERVICE ROAD                                108      Stevenson Service Road         73.17%       ✓ MATCHED
+PORTER-KRESGE RD                                   N/A      N/A                            0.00         ✗ NO MATCH
+RACHEL CARSON APARTMENTS                           146      Rachel Carson College          66.67%       ✓ MATCHED
+RACHEL CARSON COLLEGE                              146      Rachel Carson College          100.00%      ✓ MATCHED
+RACHEL CARSON DORMS                                146      Rachel Carson College          75.00%       ✓ MATCHED
+RACHEL CARSON SERVICE ROAD                         108      Stevenson Service Road         70.83%       ✓ MATCHED
+RED HILL RD.                                       N/A      N/A                            0.00         ✗ NO MATCH
+RED HILL RD. X MCLAUGHLIN                          N/A      N/A                            0.00         ✗ NO MATCH
+SOCIAL SCIENCES 1                                  114      Social Sciences                93.75%       ✓ MATCHED
+SOCIAL SCIENCES 2                                  114      Social Sciences                93.75%       ✓ MATCHED
+STEINHART WAY                                      N/A      N/A                            0.00         ✗ NO MATCH
+STEVENSON APARTMENTS                               159      Redwood Grove Apartments       63.64%       ✓ MATCHED
+STEVENSON CIRCLE                                   109      Stevenson College              78.79%       ✓ MATCHED
+STEVENSON SERVICE ROAD                             108      Stevenson Service Road         100.00%      ✓ MATCHED
+STUDENT UNION                                      N/A      N/A                            0.00         ✗ NO MATCH
+THE AARC                                           N/A      N/A                            0.00         ✗ NO MATCH
+THE FARM                                           N/A      N/A                            0.00         ✗ NO MATCH
+THE FARM RD.                                       N/A      N/A                            0.00         ✗ NO MATCH
+THE VILLAGE                                        169      The Village                    100.00%      ✓ MATCHED
+THEATER ARTS CENTER                                128      Health Center                  68.75%       ✓ MATCHED
+THIMANN LABS                                       113      Thimann Lab                    95.65%       ✓ MATCHED
+WEST FIELD HOUSE                                   103A     East Field House               93.75%       ✓ MATCHED
+WESTSIDE RESEARCH PARK                             301      Westside Research Park         100.00%      ✓ MATCHED
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+
+Total unique locations: 179
+Matched to parking lots: 135 (75.4%)
+Unmatched: 44 (24.6%)
+
+✓ Matches saved to: location_matches.csv
+✓ Unmatched saved to: location_unmatched.csv
+
+⚠ Low confidence matches (52) - review these:
+  103A EAST FIELD HOUSE → 103A East Field House (86%)
+  111A CROWN COLLEGE PIT → 111A Crown College ""Pit"" (79%)
+  111B CROWN COLLEGE CIRCLE → 111B Crown College Circle (89%)
+  117A ADMISSIONS → 117A Admissions (80%)
+  117B COOK HOUSE → 117B Cook House (80%)
+  120A LOWER MCHENRY LIBRARY → 120A Lower McHenry Library (89%)
+  120B LOWER MCHENRY LIBRARY → 120A Lower McHenry Library (89%)
+  120B UPPER MCHENRY LIBRARY → 120B Upper McHenry Library (89%)
+  129-136 FAMILY STUDENT HOUSING → 134 Family Student Housing (85%)
+  139A ENGINEERING II → 139A Engineering 2 (75%)
+  139B COMMUNICATIONS → 139B Communications (85%)
+  150A NORTH PERIMETER → 150B North Perimeter (86%)
+  150B NORTH PERIMETER → 150B North Perimeter (86%)
+  158-159 REDWOOD GROVE APARTMENTS → 159 Redwood Grove Apartments (86%)
+  ACEDEMIC RESOURSE CENTER → 201 Seymour Center (63%)
+  COGEN PLANT → 123 Heat Plant (67%)
+  COLLEGE NINE RD. → 167 College Nine (86%)
+  COOLIDGE DRIVE → 167 College Nine (62%)
+  COWELL APARTMENTS → 152 Crown/Merrill Apartments (83%)
+  COWELL APARTMENTS 2 → 152 Crown/Merrill Apartments (79%)
+  COWELL-STEVENSON RD. → 107 Cowell/Stevenson (83%)
+  COWELL-STEVENSON SERVICE RD. → 108 Stevenson Service Road (80%)
+  CROWN SERVICE RD. → 108 Stevenson Service Road (67%)
+  DIRT CROWN SERVICE RD. → 108 Stevenson Service Road (64%)
+  EAST FIELD HOUSE SPORT COMPLEX → 103A East Field House (70%)
+  EAST FIELD SERVICE ROAD → 108 Stevenson Service Road (71%)
+  ENGINEERING II → 139A Engineering 2 (89%)
+  FARM SERVICE ROAD → 108 Stevenson Service Road (67%)
+  GRADUATE STUDENT COMMONS → 157 Graduate Student Housing (79%)
+  JOHN R. LEWIS COLLEGE → 161 Oakes College (65%)
+  KRESGE ACAD → 147 Kresge College (64%)
+  KRESGE APARTMENTS → 159 Redwood Grove Apartments (73%)
+  KRESGE RD → 147 Kresge College (61%)
+  MCHENRY LIBRARY → 120A Lower McHenry Library (83%)
+  MERRILL CIRCLE → 119 Merrill College (76%)
+  OAKES APARTMENTS → 159 Redwood Grove Apartments (65%)
+  OAKES CIRCLE → 161 Oakes College (72%)
+  OAKES ROAD → 161 Oakes College (61%)
+  OCEAN HEALTH → 203 Ocean Health Building (73%)
+  PHYSICAL SCIENCES BUILDING → 114 Social Sciences (63%)
+  PORTER APARTMENTS → 159 Redwood Grove Apartments (68%)
+  PORTER DORMS → 124 Porter College (62%)
+  PORTER SERVICE ROAD → 108 Stevenson Service Road (73%)
+  RACHEL CARSON APARTMENTS → 146 Rachel Carson College (67%)
+  RACHEL CARSON DORMS → 146 Rachel Carson College (75%)
+  RACHEL CARSON SERVICE ROAD → 108 Stevenson Service Road (71%)
+  SOCIAL SCIENCES 1 → 114 Social Sciences (94%)
+  SOCIAL SCIENCES 2 → 114 Social Sciences (94%)
+  STEVENSON APARTMENTS → 159 Redwood Grove Apartments (64%)
+  STEVENSON CIRCLE → 109 Stevenson College (79%)
+  THEATER ARTS CENTER → 128 Health Center (69%)
+  WEST FIELD HOUSE → 103A East Field House (94%)
