@@ -2,3 +2,4 @@
 raw data/.DS_Store
 clean data/.DS_Store
 raw data/San Gabriel PRA 26-675_Parking Cites 2023 to 06-2026.pdf
+.env.local

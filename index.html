@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Citations</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f7;
+            --bg-tertiary: #efefef;
+            --text-primary: #000000;
+            --text-secondary: #666666;
+            --text-tertiary: #999999;
+            --border-color: #e0e0e0;
+            --accent: #ffb700;
+            --accent-hover: #ffc933;
+            --success: #34c759;
+            --danger: #ff3b30;
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 12px;
+            --spacing-lg: 16px;
+            --spacing-xl: 24px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding: var(--spacing-lg);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+            z-index: 100;
+            min-height: 60px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+        }
+
+        .header-title {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.4px;
+        }
+
+        .header-center {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            flex: 1;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        /* Controls */
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            background: var(--bg-secondary);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-md);
+        }
+
+        .control-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            min-width: 40px;
+        }
+
+        input[type="date"],
+        select {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        input[type="date"]:hover,
+        select:hover {
+            border-color: var(--text-tertiary);
+        }
+
+        input[type="date"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 183, 0, 0.1);
+        }
+
+        /* Buttons */
+        button {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: inherit;
+            letter-spacing: -0.3px;
+        }
+
+        button.primary {
+            background: var(--accent);
+            color: white;
+            min-width: 76px;
+        }
+
+        button.primary:hover {
+            background: var(--accent-hover);
+        }
+
+        button.primary:active {
+            transform: scale(0.98);
+        }
+
+        button.secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        button.secondary:hover {
+            background: var(--bg-tertiary);
+        }
+
+        button.secondary.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* Time Display */
+        .time-display {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.3px;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        /* Sliders */
+        input[type="range"] {
+            height: 4px;
+            border-radius: 2px;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background: linear-gradient(to right, var(--accent) 0%, var(--accent) 0%, var(--border-color) 0%, var(--border-color) 100%);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            box-shadow: 0 2px 8px rgba(255, 183, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            border: none;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s;
+        }
+
+        input[type="range"]::-moz-range-thumb:hover {
+            box-shadow: 0 2px 8px rgba(255, 183, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+        /* Speed Display */
+        .speed-value {
+            font-size: 13px;
+            color: var(--text-secondary);
+            min-width: 50px;
+        }
+
+        /* Main Content */
+        .content {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Map */
+        #map {
+            flex: 1;
+            width: 100%;
+        }
+
+        .mapboxgl-popup-content {
+            padding: var(--spacing-md) !important;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Popup */
+        .ticket-popup {
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .ticket-popup p {
+            margin: var(--spacing-sm) 0;
+            display: flex;
+            justify-content: space-between;
+            gap: var(--spacing-md);
+        }
+
+        .ticket-popup strong {
+            color: var(--text-secondary);
+            font-weight: 500;
+            flex: 0 0 auto;
+        }
+
+        .ticket-popup span {
+            color: var(--text-primary);
+            font-weight: 600;
+            flex: 1;
+            text-align: right;
+        }
+
+        /* Tabs */
+        .tab-nav {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-primary);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: var(--spacing-md) var(--spacing-lg);
+            border: none;
+            background: transparent;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            letter-spacing: -0.3px;
+        }
+
+        .tab-button:hover {
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+        }
+
+        .tab-button.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .tab-content {
+            display: none;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .tab-content.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Analysis */
+        .analysis-content {
+            padding: var(--spacing-xl);
+            overflow-y: auto;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .analysis-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .analysis-card h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            letter-spacing: -0.3px;
+        }
+
+        .analysis-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Timeline */
+        .timeline-container {
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .timeline-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .timeline-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-slider-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .timeline-slider-wrapper input[type="range"] {
+            width: 100%;
+        }
+
+        .timeline-ticks {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-tertiary);
+            padding: 0 var(--spacing-sm);
+        }
+
+        .timeline-ticks span {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Legend */
+        .legend-container {
+            position: absolute;
+            bottom: var(--spacing-lg);
+            right: var(--spacing-lg);
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            max-height: 320px;
+            overflow-y: auto;
+            z-index: 40;
+            box-shadow: var(--shadow-md);
+        }
+
+        .legend-title {
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+            font-size: 12px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .legend-label {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        /* Loading */
+        .loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--bg-primary);
+            padding: var(--spacing-xl) calc(var(--spacing-xl) * 2);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .loading-text {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: var(--spacing-md);
+                padding: var(--spacing-md);
+            }
+
+            .header-left,
+            .header-center,
+            .header-right {
+                width: 100%;
+            }
+
+            .header-center {
+                flex-direction: column;
+            }
+
+            .control-group {
+                width: 100%;
+            }
+
+            input[type="date"],
+            button,
+            select {
+                width: 100%;
+            }
+
+            .legend-container {
+                bottom: 200px;
+                right: var(--spacing-md);
+                left: var(--spacing-md);
+                max-width: none;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-container {
+                gap: var(--spacing-md);
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--text-tertiary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <p class="loading-text">Loading parking data...</p>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <div class="header-title">Parking Citations</div>
+            </div>
+
+            <div class="header-center">
+                <div class="control-group">
+                    <span class="control-label">Date</span>
+                    <input type="date" id="dateInput">
+                </div>
+
+                <div class="time-display" id="timeDisplay">00:00</div>
+
+                <button class="primary" id="playPauseBtn">▶ Play</button>
+            </div>
+
+            <div class="header-right">
+                <div class="control-group">
+                    <span class="control-label">Speed</span>
+                    <input type="range" id="speedInput" min="0.25" max="2" step="0.25" value="1" style="width: 120px;">
+                    <span class="speed-value" id="speedDisplay">1s = 1h</span>
+                </div>
+
+                <button class="secondary" id="polygonToggle">Show Lots</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="tab-nav">
+                <button class="tab-button active" data-tab="map">Map</button>
+                <button class="tab-button" data-tab="analysis">Analysis</button>
+            </div>
+
+            <div id="map" class="tab-content active"></div>
+
+            <div id="analysis" class="tab-content">
+                <div class="analysis-content">
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h3>Heat Map by Violation</h3>
+                            <p>Coming soon</p>
+                        </div>
+                        <div class="analysis-card">
+                            <h3>Heat Map by Location</h3>
+                            <p>Coming soon</p>
+                        </div>
+                        <div class="analysis-card">
+                            <h3>Tickets per Hour</h3>
+                            <p>Coming soon</p>
+                        </div>
+                        <div class="analysis-card">
+                            <h3>Citation Revenue</h3>
+                            <p>Coming soon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-header">
+                <span class="timeline-label">Timeline</span>
+            </div>
+            <div class="timeline-slider-wrapper">
+                <input type="range" id="timelineSlider" min="0" max="1440" step="30" value="0">
+                <div class="timeline-ticks">
+                    <span>00:00</span>
+                    <span>06:00</span>
+                    <span>12:00</span>
+                    <span>18:00</span>
+                    <span>23:59</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="legend-container" id="legend">
+        <div class="legend-title">Violations</div>
+        <div id="legendContent"></div>
+    </div>
+
+    <script>
+        // Configuration
+        const MAPBOX_TOKEN = process.env.VITE_MAPBOX_TOKEN || window.MAPBOX_TOKEN || '';
+        const DATA_URL = './data';
+        const UCSC_CENTER = [-122.0597, 36.9909];
+        const UCSC_ZOOM = 13;
+
+        // State
+        let state = {
+            currentDate: new Date(2025, 0, 1),
+            currentMinute: 0,
+            isPlaying: false,
+            playbackSpeed: 1,
+            ticketsData: null,
+            violationColors: null,
+            allTickets: [],
+            visibleTickets: [],
+            parkingLotsVisible: true,
+            currentPopup: null
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                if (!MAPBOX_TOKEN) {
+                    throw new Error('Mapbox token not found. Set VITE_MAPBOX_TOKEN environment variable.');
+                }
+
+                console.log('Loading data...');
+                await loadData();
+                
+                mapboxgl.accessToken = MAPBOX_TOKEN;
+                initMap();
+                
+                setupEventListeners();
+                updateDateInput();
+                updateMap();
+                
+                document.getElementById('loading').style.display = 'none';
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('loading').innerHTML = `<p class="loading-text">Error: ${error.message}</p>`;
+            }
+        });
+
+        async function loadData() {
+            const ticketsResponse = await fetch(`${DATA_URL}/tickets_with_coordinates.geojson`);
+            state.ticketsData = await ticketsResponse.json();
+            state.allTickets = state.ticketsData.features;
+            
+            const colorsResponse = await fetch(`${DATA_URL}/violation_colors.json`);
+            state.violationColors = await colorsResponse.json();
+        }
+
+        function initMap() {
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/light-v11',
+                center: UCSC_CENTER,
+                zoom: UCSC_ZOOM,
+                pitch: 0,
+                bearing: 0
+            });
+
+            window.map = map;
+
+            map.on('load', () => {
+                map.addSource('parking-lots', {
+                    type: 'geojson',
+                    data: `${DATA_URL}/parking_lots.geojson`
+                });
+
+                map.addLayer({
+                    id: 'parking-lots-fill',
+                    type: 'fill',
+                    source: 'parking-lots',
+                    paint: {
+                        'fill-color': '#ffd700',
+                        'fill-opacity': 0.15
+                    }
+                });
+
+                map.addLayer({
+                    id: 'parking-lots-outline',
+                    type: 'line',
+                    source: 'parking-lots',
+                    paint: {
+                        'line-color': '#ffc700',
+                        'line-width': 1.5,
+                        'line-opacity': 0.4
+                    }
+                });
+
+                map.addSource('tickets', {
+                    type: 'geojson',
+                    data: {
+                        type: 'FeatureCollection',
+                        features: []
+                    }
+                });
+
+                map.addLayer({
+                    id: 'tickets-points',
+                    type: 'circle',
+                    source: 'tickets',
+                    paint: {
+                        'circle-radius': [
+                            'interpolate',
+                            ['linear'],
+                            ['zoom'],
+                            10, 3,
+                            15, 6,
+                            18, 10
+                        ],
+                        'circle-color': ['get', 'color'],
+                        'circle-opacity': 0.85,
+                        'circle-stroke-width': 1.5,
+                        'circle-stroke-color': '#ffffff'
+                    }
+                });
+
+                map.on('click', 'tickets-points', (e) => {
+                    if (state.currentPopup) {
+                        state.currentPopup.remove();
+                    }
+
+                    const feature = e.features[0];
+                    const props = feature.properties;
+
+                    const popupHTML = `
+                        <div class="ticket-popup">
+                            <p><strong>Ticket</strong> <span>${props.ticket_id}</span></p>
+                            <p><strong>Time</strong> <span>${props.time}</span></p>
+                            <p><strong>Date</strong> <span>${props.date}</span></p>
+                            <p><strong>Location</strong> <span>${props.lot_name || props.location}</span></p>
+                            <p><strong>Violation</strong> <span>${props.violation_code}</span></p>
+                            <p><strong>Vehicle</strong> <span>${props.make} ${props.color}</span></p>
+                            <p><strong>Status</strong> <span>${props.status}</span></p>
+                            <p><strong>Amount</strong> <span>${props.amount}</span></p>
+                        </div>
+                    `;
+
+                    state.currentPopup = new mapboxgl.Popup()
+                        .setLngLat(e.lngLat)
+                        .setHTML(popupHTML)
+                        .addTo(map);
+                });
+
+                map.on('mouseenter', 'tickets-points', () => {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+
+                map.on('mouseleave', 'tickets-points', () => {
+                    map.getCanvas().style.cursor = '';
+                });
+            });
+        }
+
+        function setupEventListeners() {
+            document.getElementById('dateInput').addEventListener('change', (e) => {
+                state.currentDate = new Date(e.target.value + 'T00:00:00');
+                state.currentMinute = 0;
+                updateTimelineSlider();
+                updateTimeDisplay();
+                updateMap();
+            });
+
+            document.getElementById('timelineSlider').addEventListener('input', (e) => {
+                state.currentMinute = parseInt(e.target.value);
+                state.isPlaying = false;
+                document.getElementById('playPauseBtn').textContent = '▶ Play';
+                updateTimeDisplay();
+                updateMap();
+            });
+
+            document.getElementById('playPauseBtn').addEventListener('click', togglePlayPause);
+
+            document.getElementById('speedInput').addEventListener('input', (e) => {
+                state.playbackSpeed = parseFloat(e.target.value);
+                updateSpeedDisplay();
+            });
+
+            document.getElementById('polygonToggle').addEventListener('click', togglePolygons);
+
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const tabName = e.target.dataset.tab;
+                    switchTab(tabName);
+                });
+            });
+        }
+
+        function updateDateInput() {
+            const today = new Date();
+            const todayStr = today.toISOString().split('T')[0];
+            const hasToday = state.allTickets.some(ticket => ticket.properties.date === todayStr);
+            
+            if (hasToday) {
+                state.currentDate = today;
+            } else if (state.allTickets.length > 0) {
+                state.currentDate = new Date(state.allTickets[0].properties.date);
+            }
+            
+            document.getElementById('dateInput').valueAsDate = state.currentDate;
+            state.currentMinute = 0;
+            updateTimelineSlider();
+        }
+
+        function updateMap() {
+            if (!window.map) return;
+
+            const dateStr = state.currentDate.toISOString().split('T')[0];
+            const currentTime = minutesToTime(state.currentMinute);
+
+            state.visibleTickets = state.allTickets.filter(ticket => {
+                return ticket.properties.date === dateStr && ticket.properties.time <= currentTime;
+            }).map(ticket => {
+                const violationCode = ticket.properties.violation_code;
+                const color = state.violationColors?.colors?.[violationCode] || '#95A5A6';
+                return {
+                    ...ticket,
+                    properties: {
+                        ...ticket.properties,
+                        color: color
+                    }
+                };
+            });
+
+            if (window.map.getSource('tickets')) {
+                window.map.getSource('tickets').setData({
+                    type: 'FeatureCollection',
+                    features: state.visibleTickets
+                });
+            }
+
+            updateLegend();
+        }
+
+        function updateLegend() {
+            const violations = new Set();
+            state.visibleTickets.forEach(ticket => {
+                violations.add(ticket.properties.violation_code);
+            });
+
+            const legendContent = document.getElementById('legendContent');
+            legendContent.innerHTML = '';
+
+            Array.from(violations).sort().forEach(code => {
+                const color = state.violationColors?.colors?.[code] || '#95A5A6';
+                const item = document.createElement('div');
+                item.className = 'legend-item';
+                item.innerHTML = `
+                    <div class="legend-color" style="background-color: ${color};"></div>
+                    <div class="legend-label">${code}</div>
+                `;
+                legendContent.appendChild(item);
+            });
+
+            if (violations.size === 0) {
+                legendContent.innerHTML = '<p style="color: var(--text-tertiary); font-size: 12px;">No violations</p>';
+            }
+        }
+
+        function updateTimeDisplay() {
+            const time = minutesToTime(state.currentMinute);
+            document.getElementById('timeDisplay').textContent = time;
+            document.getElementById('timelineSlider').value = state.currentMinute;
+        }
+
+        function updateTimelineSlider() {
+            document.getElementById('timelineSlider').value = state.currentMinute;
+        }
+
+        function updateSpeedDisplay() {
+            document.getElementById('speedDisplay').textContent = `1s = ${state.playbackSpeed}h`;
+        }
+
+        function togglePlayPause() {
+            state.isPlaying = !state.isPlaying;
+            const btn = document.getElementById('playPauseBtn');
+            btn.textContent = state.isPlaying ? '⏸ Pause' : '▶ Play';
+
+            if (state.isPlaying) {
+                playbackLoop();
+            }
+        }
+
+        function togglePolygons() {
+            state.parkingLotsVisible = !state.parkingLotsVisible;
+            const btn = document.getElementById('polygonToggle');
+            btn.classList.toggle('active');
+
+            if (window.map) {
+                const visibility = state.parkingLotsVisible ? 'visible' : 'none';
+                window.map.setLayoutProperty('parking-lots-fill', 'visibility', visibility);
+                window.map.setLayoutProperty('parking-lots-outline', 'visibility', visibility);
+            }
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.tab === tabName) {
+                    btn.classList.add('active');
+                }
+            });
+
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+                if (content.id === tabName) {
+                    content.classList.add('active');
+                }
+            });
+
+            if (tabName === 'map' && window.map) {
+                setTimeout(() => window.map.resize(), 100);
+            }
+        }
+
+        async function playbackLoop() {
+            const msPerSecond = 1000;
+            const minutesPerSecond = state.playbackSpeed * 60;
+
+            while (state.isPlaying) {
+                state.currentMinute += minutesPerSecond;
+
+                if (state.currentMinute >= 1440) {
+                    state.currentDate.setDate(state.currentDate.getDate() + 1);
+                    state.currentMinute = 0;
+                    document.getElementById('dateInput').valueAsDate = state.currentDate;
+                }
+
+                updateTimeDisplay();
+                updateMap();
+
+                await new Promise(resolve => setTimeout(resolve, msPerSecond));
+            }
+        }
+
+        function minutesToTime(minutes) {
+            const hours = Math.floor(minutes / 60);
+            const mins = Math.floor(minutes % 60);
+            return `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}`;
+        }
+    </script>
+</body>
+</html>
